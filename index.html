@@ -6,235 +6,244 @@
 <title>Demirci Belediyesi Sosyal Tesisi</title>
 <style>
 :root{
-  --bg:#11100f;
-  --panel:#1b1815;
-  --panel2:#231f1b;
-  --gold:#d9b15f;
-  --cream:#f6ead5;
-  --text:#ffffff;
-  --muted:#c7bba7;
-  --line:#3a322b;
-  --red:#9f2f2f;
+  --bg:#0f1110; --panel:#171a18; --panel2:#1d211e; --gold:#d8b15e;
+  --gold2:#f0d08a; --text:#fff; --muted:#b9b7b1; --line:#31362f; --green:#173f39;
 }
 *{box-sizing:border-box}
+html{scroll-behavior:smooth}
 body{
-  margin:0;
-  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
-  background:
-    radial-gradient(circle at top,#2d241c 0,#171411 38%,#0f0e0d 100%);
-  color:var(--text);
+  margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+  background:radial-gradient(circle at top,#2a221a 0,#161513 34%,#0d0f0e 100%);
+  color:var(--text)
 }
-.container{
-  max-width:760px;
-  margin:auto;
-  padding:18px 14px 44px;
-}
+.container{max-width:820px;margin:auto;padding:16px 14px 46px}
 .hero{
-  background:linear-gradient(180deg,#201b17,#151311);
-  border:1px solid #3b3129;
-  border-radius:24px;
-  padding:24px 18px 20px;
-  text-align:center;
-  box-shadow:0 18px 45px #0008;
+  background:linear-gradient(180deg,#1c1d1a,#141513);border:1px solid #3b3328;
+  border-radius:24px;padding:22px 18px;text-align:center;box-shadow:0 18px 45px #0008
 }
 .logo{
-  width:74px;height:74px;border-radius:50%;
-  margin:0 auto 12px;
-  display:grid;place-items:center;
-  border:2px solid var(--gold);
-  color:var(--gold);
-  font-weight:900;
-  letter-spacing:.5px;
-  font-size:14px;
+  width:88px;height:88px;border-radius:50%;margin:0 auto 12px;display:grid;place-items:center;
+  border:2px solid var(--gold);color:var(--gold2);font-weight:900;line-height:1.1
 }
-h1{margin:0;font-size:30px;line-height:1.1}
-.sub{color:var(--gold);font-weight:800;margin-top:7px;font-size:18px}
+h1{margin:0;font-size:31px}
+.sub{margin-top:7px;color:var(--gold2);font-size:19px;font-weight:800}
 .date{
-  display:inline-block;
-  margin-top:14px;
-  padding:8px 13px;
-  border-radius:999px;
-  background:#2d241c;
-  color:var(--cream);
-  border:1px solid #584838;
-  font-weight:700;
+  display:inline-block;margin-top:14px;padding:9px 14px;border-radius:999px;background:#2a241d;
+  color:#fff4d8;border:1px solid #5a4937;font-weight:800
 }
-.note{
-  margin:15px auto 0;
-  max-width:560px;
-  color:var(--muted);
-  line-height:1.5;
-  font-size:14px;
+.notice{margin:12px auto 0;max-width:620px;color:var(--muted);font-size:13px;line-height:1.5}
+.quick{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:16px}
+.quick a{
+  color:#17120d;text-decoration:none;background:linear-gradient(90deg,var(--gold2),var(--gold));
+  padding:11px 8px;border-radius:13px;font-weight:900;font-size:13px
 }
 .section{
-  margin-top:16px;
-  background:linear-gradient(180deg,var(--panel2),var(--panel));
-  border:1px solid var(--line);
-  border-radius:20px;
-  overflow:hidden;
-  box-shadow:0 12px 30px #0004;
+  margin-top:16px;border:1px solid var(--line);border-radius:20px;overflow:hidden;
+  background:linear-gradient(180deg,var(--panel2),var(--panel));box-shadow:0 12px 30px #0004
 }
 .section-head{
-  padding:16px 17px 12px;
-  border-bottom:1px solid var(--line);
-  display:flex;
-  justify-content:space-between;
-  align-items:end;
-  gap:12px;
+  background:linear-gradient(90deg,#163a35,#1e4b44);padding:15px 16px;
+  display:flex;justify-content:space-between;align-items:center;gap:12px
 }
-.section-head h2{
-  margin:0;
-  font-size:21px;
-}
-.hours{
-  color:var(--gold);
-  font-weight:800;
-  white-space:nowrap;
-  font-size:14px;
-}
-.items{padding:6px 14px 12px}
+.section-head h2{margin:0;font-size:21px}
+.hours{color:#ffe2a0;font-weight:900;font-size:14px;white-space:nowrap}
+.table-wrap{overflow-x:auto}
+table{width:100%;border-collapse:collapse;min-width:520px}
+th,td{padding:12px 14px;border-bottom:1px dashed #3a3d38}
+th{color:#e8d8b4;font-size:12px;text-align:right;background:#141714}
+th:first-child,td:first-child{text-align:left}
+td{font-size:15px;text-align:right}
+td:first-child{font-weight:750}
+tr:last-child td{border-bottom:0}
+.price{color:var(--gold2);font-weight:900}
+.muted{color:#777}
+.cards{padding:8px 14px 12px}
 .item{
-  display:flex;
-  justify-content:space-between;
-  gap:18px;
-  padding:13px 2px;
-  border-bottom:1px dashed #41382f;
+  display:flex;justify-content:space-between;gap:16px;padding:12px 2px;
+  border-bottom:1px dashed #3a3d38
 }
 .item:last-child{border-bottom:0}
-.name{font-weight:700}
-.price{
-  color:var(--gold);
-  font-weight:900;
-  white-space:nowrap;
-}
-.badge{
-  display:inline-block;
-  font-size:11px;
-  margin-left:6px;
-  padding:3px 7px;
-  border-radius:999px;
-  background:#493725;
-  color:#f2d69c;
-  vertical-align:middle;
-}
-.footer{
-  text-align:center;
-  color:#9e9386;
-  font-size:13px;
-  margin-top:22px;
-  line-height:1.55;
-}
-.quick{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:8px;
-  margin-top:14px;
-}
-.quick a{
-  text-decoration:none;
-  color:#17120d;
-  background:linear-gradient(90deg,#f0d392,#cba35d);
-  border-radius:14px;
-  padding:11px 8px;
-  text-align:center;
-  font-weight:900;
-  font-size:13px;
-}
-@media(max-width:480px){
-  h1{font-size:26px}
-  .section-head{align-items:center}
+.name{font-weight:750}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:14px;padding:14px}
+.subcard{background:#141714;border:1px solid #343730;border-radius:15px;padding:8px 12px}
+.footer{text-align:center;color:#948f86;font-size:13px;margin-top:24px;line-height:1.6}
+@media(max-width:620px){
   .quick{grid-template-columns:1fr}
+  .two-col{grid-template-columns:1fr}
+  h1{font-size:27px}
 }
 </style>
 </head>
 <body>
 <div class="container">
 
-  <section class="hero">
-    <div class="logo">DEMİRCİ<br>BLD.</div>
-    <h1>Demirci Belediyesi</h1>
-    <div class="sub">Sosyal Tesisi QR Menü</div>
-    <div class="date">5 Eylül Cumartesi • Yarın</div>
-    <p class="note">Fiyatlar geldiğinde “— ₺” alanlarını güncelleyeceğiz. QR kod ve site adresi değişmeyecek.</p>
-
-    <div class="quick">
-      <a href="#gunun">Günün Menüsü</a>
-      <a href="#aksam">Akşam Izgara</a>
-      <a href="#alakart">Alakart</a>
-    </div>
-  </section>
-
-  <section class="section" id="gunun">
-    <div class="section-head">
-      <h2>🍲 Günün Menüsü</h2>
-      <div class="hours">11.30–18.00</div>
-    </div>
-    <div class="items">
-      <div class="item"><div class="name">Ezogelin Çorbası</div><div class="price">— ₺</div></div>
-      <div class="item"><div class="name">Kellepaça Çorbası</div><div class="price">— ₺</div></div>
-      <div class="item"><div class="name">Güveç</div><div class="price">— ₺</div></div>
-      <div class="item"><div class="name">Kavurma</div><div class="price">— ₺</div></div>
-      <div class="item"><div class="name">Karnıyarık</div><div class="price">— ₺</div></div>
-      <div class="item"><div class="name">Misket Köfte</div><div class="price">— ₺</div></div>
-      <div class="item"><div class="name">Çıtır Tavuk</div><div class="price">— ₺</div></div>
-      <div class="item"><div class="name">Kuru Fasulye</div><div class="price">— ₺</div></div>
-      <div class="item"><div class="name">Bulgur Pilavı</div><div class="price">— ₺</div></div>
-      <div class="item"><div class="name">Pirinç Pilavı</div><div class="price">— ₺</div></div>
-    </div>
-  </section>
-
-  <section class="section" id="aksam">
-    <div class="section-head">
-      <h2>🔥 Yarın Akşam • Izgara</h2>
-      <div class="hours">18.00–22.00</div>
-    </div>
-    <div class="items">
-      <div class="item"><div class="name">Antrikot</div><div class="price">— ₺</div></div>
-      <div class="item"><div class="name">Biftek</div><div class="price">— ₺</div></div>
-      <div class="item"><div class="name">Et Karışık</div><div class="price">— ₺</div></div>
-      <div class="item"><div class="name">Kanat Karışık</div><div class="price">— ₺</div></div>
-      <div class="item"><div class="name">Karışık Izgara</div><div class="price">— ₺</div></div>
-      <div class="item"><div class="name">Kasap Sucuk</div><div class="price">— ₺</div></div>
-      <div class="item"><div class="name">Köfte Izgara</div><div class="price">— ₺</div></div>
-      <div class="item"><div class="name">Kuzu Pirzola</div><div class="price">— ₺</div></div>
-      <div class="item"><div class="name">Kuzu Şiş</div><div class="price">— ₺</div></div>
-      <div class="item"><div class="name">Lokum Bonfile</div><div class="price">— ₺</div></div>
-      <div class="item"><div class="name">Tavuk Göğsü</div><div class="price">— ₺</div></div>
-      <div class="item"><div class="name">Tavuk Karışık</div><div class="price">— ₺</div></div>
-    </div>
-  </section>
-
-  <section class="section" id="alakart">
-    <div class="section-head">
-      <h2>🍽️ Alakart Lezzetler</h2>
-      <div class="hours">18.00–22.00</div>
-    </div>
-    <div class="items">
-      <div class="item"><div class="name">Et Çökertme</div><div class="price">— ₺</div></div>
-      <div class="item"><div class="name">Et Fajita</div><div class="price">— ₺</div></div>
-      <div class="item"><div class="name">Et Saç Kavurma</div><div class="price">— ₺</div></div>
-      <div class="item"><div class="name">Tavuk Çökertme</div><div class="price">— ₺</div></div>
-      <div class="item"><div class="name">Tavuk Fajita</div><div class="price">— ₺</div></div>
-      <div class="item"><div class="name">Tavuk Saç Kavurma</div><div class="price">— ₺</div></div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="section-head">
-      <h2>🌙 Gece Çorbası</h2>
-      <div class="hours">01.30’a kadar</div>
-    </div>
-    <div class="items">
-      <div class="item"><div class="name">Ezogelin Çorbası <span class="badge">Gece</span></div><div class="price">— ₺</div></div>
-      <div class="item"><div class="name">Kellepaça Çorbası <span class="badge">Gece</span></div><div class="price">— ₺</div></div>
-    </div>
-  </section>
-
-  <div class="footer">
-    Taze malzeme • Kaliteli hizmet • Herkes için lezzet<br>
-    Demirci Belediyesi Sosyal Tesisi
+<section class="hero">
+  <div class="logo">DEMİRCİ<br>BELEDİYESİ</div>
+  <h1>Demirci Belediyesi</h1>
+  <div class="sub">Sosyal Tesisi QR Menü</div>
+  <div class="date">5 Eylül Cumartesi</div>
+  <div class="notice">Günün menüsü her sabah güncellenir. Akşam ızgara, alakart, tatlı ve içecek bölümleri sabit menü olarak sunulur.</div>
+  <div class="quick">
+    <a href="#gunun">Günün Menüsü</a>
+    <a href="#izgara">Izgara</a>
+    <a href="#alakart">Alakart</a>
   </div>
+</section>
 
+<section class="section" id="gunun">
+  <div class="section-head"><h2>🍲 Günün Menüsü</h2><div class="hours">11.30–18.00</div></div>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Ürün</th><th>Yarım</th><th>Tam / 1 Porsiyon</th><th>1,5 Porsiyon</th></tr></thead>
+      <tbody>
+        <tr><td>Ezogelin Çorbası</td><td class="price">50 ₺</td><td class="price">80 ₺</td><td class="muted">—</td></tr>
+        <tr><td>Kellepaça Çorbası</td><td class="price">100 ₺</td><td class="price">150 ₺</td><td class="muted">—</td></tr>
+        <tr><td>Güveç</td><td class="price">200 ₺</td><td class="price">350 ₺</td><td class="muted">—</td></tr>
+        <tr><td>Kavurma</td><td class="price">175 ₺</td><td class="price">350 ₺</td><td class="price">525 ₺</td></tr>
+        <tr><td>Karnıyarık</td><td class="muted">—</td><td class="price">225 ₺</td><td class="muted">—</td></tr>
+        <tr><td>Misket Köfte</td><td class="muted">—</td><td class="price">250 ₺</td><td class="muted">—</td></tr>
+        <tr><td>Çıtır Tavuk Patates</td><td class="muted">—</td><td class="price">300 ₺</td><td class="muted">—</td></tr>
+        <tr><td>Kuru Fasulye</td><td class="price">60 ₺</td><td class="price">100 ₺</td><td class="muted">—</td></tr>
+        <tr><td>Bulgur Pilavı</td><td class="price">40 ₺</td><td class="price">60 ₺</td><td class="muted">—</td></tr>
+        <tr><td>Pirinç Pilavı</td><td class="price">40 ₺</td><td class="price">60 ₺</td><td class="muted">—</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="section" id="izgara">
+  <div class="section-head"><h2>🔥 Izgara Çeşitleri</h2><div class="hours">18.00–22.00</div></div>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Ürün</th><th>Yarım</th><th>1 Porsiyon</th><th>1,5 Porsiyon</th></tr></thead>
+      <tbody>
+        <tr><td>Antrikot</td><td class="price">350 ₺</td><td class="price">650 ₺</td><td class="price">825 ₺</td></tr>
+        <tr><td>Biftek</td><td class="price">300 ₺</td><td class="price">550 ₺</td><td class="muted">—</td></tr>
+        <tr><td>Ciğer Tava</td><td class="muted">—</td><td class="price">400 ₺</td><td class="muted">—</td></tr>
+        <tr><td>Et Karışık</td><td class="price">650 ₺</td><td class="price">1.000 ₺</td><td class="price">1.650 ₺</td></tr>
+        <tr><td>Kanat</td><td class="price">200 ₺</td><td class="price">300 ₺</td><td class="price">525 ₺</td></tr>
+        <tr><td>Karışık Izgara</td><td class="price">500 ₺</td><td class="price">800 ₺</td><td class="price">1.200 ₺</td></tr>
+        <tr><td>Kasap Sucuk</td><td class="price">250 ₺</td><td class="price">400 ₺</td><td class="price">600 ₺</td></tr>
+        <tr><td>Köfte Izgara</td><td class="price">250 ₺</td><td class="price">400 ₺</td><td class="price">650 ₺</td></tr>
+        <tr><td>Kuzu Pirzola</td><td class="price">350 ₺</td><td class="price">600 ₺</td><td class="price">900 ₺</td></tr>
+        <tr><td>Kuzu Şiş</td><td class="price">350 ₺</td><td class="price">600 ₺</td><td class="price">950 ₺</td></tr>
+        <tr><td>Lokum Bonfile</td><td class="muted">—</td><td class="price">800 ₺</td><td class="muted">—</td></tr>
+        <tr><td>Tavuk Göğsü</td><td class="price">200 ₺</td><td class="price">350 ₺</td><td class="price">600 ₺</td></tr>
+        <tr><td>Tavuk Karışık</td><td class="price">250 ₺</td><td class="price">395 ₺</td><td class="price">550 ₺</td></tr>
+        <tr><td>Patates Kızartması</td><td class="muted">—</td><td class="price">100 ₺</td><td class="muted">—</td></tr>
+        <tr><td>Sosis</td><td class="price">25 ₺</td><td class="muted">—</td><td class="muted">—</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="section" id="alakart">
+  <div class="section-head"><h2>🍽️ Tava Yemekleri & Alakart</h2><div class="hours">18.00–22.00</div></div>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Ürün</th><th>Yarım</th><th>1 Porsiyon</th><th>1,5 Porsiyon</th></tr></thead>
+      <tbody>
+        <tr><td>Et Çökertme</td><td class="price">250 ₺</td><td class="price">350 ₺</td><td class="price">525 ₺</td></tr>
+        <tr><td>Et Fajita</td><td class="price">250 ₺</td><td class="price">350 ₺</td><td class="muted">—</td></tr>
+        <tr><td>Et Saç Kavurma</td><td class="price">220 ₺</td><td class="price">395 ₺</td><td class="price">665 ₺</td></tr>
+        <tr><td>Tavuk Çökertme</td><td class="muted">—</td><td class="price">275 ₺</td><td class="muted">—</td></tr>
+        <tr><td>Tavuk Fajita</td><td class="muted">—</td><td class="price">275 ₺</td><td class="muted">—</td></tr>
+        <tr><td>Tavuk Saç Kavurma</td><td class="price">200 ₺</td><td class="price">300 ₺</td><td class="price">475 ₺</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head"><h2>🥣 Çorbalar</h2><div class="hours">Gece 01.30’a kadar</div></div>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Çorba</th><th>Yarım</th><th>Tam</th></tr></thead>
+      <tbody>
+        <tr><td>Mercimek</td><td class="price">50 ₺</td><td class="price">80 ₺</td></tr>
+        <tr><td>Domates</td><td class="price">50 ₺</td><td class="price">80 ₺</td></tr>
+        <tr><td>Etli Çorba</td><td class="price">80 ₺</td><td class="price">125 ₺</td></tr>
+        <tr><td>Ezogelin</td><td class="price">50 ₺</td><td class="price">80 ₺</td></tr>
+        <tr><td>Kellepaça</td><td class="price">100 ₺</td><td class="price">150 ₺</td></tr>
+        <tr><td>Mantar</td><td class="price">60 ₺</td><td class="price">100 ₺</td></tr>
+        <tr><td>Tarhana</td><td class="price">50 ₺</td><td class="price">80 ₺</td></tr>
+        <tr><td>Tavuk Suyu</td><td class="price">75 ₺</td><td class="price">100 ₺</td></tr>
+        <tr><td>Yayla Çorbası</td><td class="price">75 ₺</td><td class="price">100 ₺</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head"><h2>🥤 İçecekler</h2><div class="hours">Tüm Gün</div></div>
+  <div class="two-col">
+    <div class="subcard">
+      <div class="item"><span class="name">Ayran</span><span class="price">20 ₺</span></div>
+      <div class="item"><span class="name">Çay</span><span class="price">20 ₺</span></div>
+      <div class="item"><span class="name">Churchill</span><span class="price">60 ₺</span></div>
+      <div class="item"><span class="name">Niğde Gazozu</span><span class="price">40 ₺</span></div>
+      <div class="item"><span class="name">Kola</span><span class="price">50 ₺</span></div>
+      <div class="item"><span class="name">Meyve Suyu</span><span class="price">60 ₺</span></div>
+      <div class="item"><span class="name">Türk Kahvesi</span><span class="price">50 ₺</span></div>
+    </div>
+    <div class="subcard">
+      <div class="item"><span class="name">Sade Soda</span><span class="price">30 ₺</span></div>
+      <div class="item"><span class="name">Şalgam</span><span class="price">40 ₺</span></div>
+      <div class="item"><span class="name">Sarıyer</span><span class="price">50 ₺</span></div>
+      <div class="item"><span class="name">Soğuk Çay</span><span class="price">40 ₺</span></div>
+      <div class="item"><span class="name">Su</span><span class="price">15 ₺</span></div>
+      <div class="item"><span class="name">330'luk Su</span><span class="price">10 ₺</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head"><h2>🍰 Tatlılar</h2><div class="hours">Tüm Gün</div></div>
+  <div class="two-col">
+    <div class="subcard">
+      <div class="item"><span class="name">Baklava</span><span class="price">90 ₺</span></div>
+      <div class="item"><span class="name">Burma Kadayıf</span><span class="price">125 ₺</span></div>
+      <div class="item"><span class="name">Cheesecake</span><span class="price">200 ₺</span></div>
+      <div class="item"><span class="name">İrmik Helvası</span><span class="price">100 ₺</span></div>
+      <div class="item"><span class="name">Islak Kek</span><span class="price">150 ₺</span></div>
+      <div class="item"><span class="name">Kakaolu Kadayıf</span><span class="price">80 ₺</span></div>
+      <div class="item"><span class="name">Kazandibi</span><span class="price">100 ₺</span></div>
+    </div>
+    <div class="subcard">
+      <div class="item"><span class="name">Keşkül</span><span class="price">80 ₺</span></div>
+      <div class="item"><span class="name">Magnolya</span><span class="price">150 ₺</span></div>
+      <div class="item"><span class="name">Peynir Tatlısı</span><span class="price">80 ₺</span></div>
+      <div class="item"><span class="name">Revani</span><span class="price">125 ₺</span></div>
+      <div class="item"><span class="name">Sütlaç</span><span class="price">150 ₺</span></div>
+      <div class="item"><span class="name">Tiramisu</span><span class="price">150 ₺</span></div>
+      <div class="item"><span class="name">Trileçe</span><span class="price">150 ₺</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head"><h2>🌿 Kolonyalar</h2><div class="hours">Satış</div></div>
+  <div class="cards">
+    <div class="item"><span class="name">Badem Çiçeği Özü</span><span class="price">195 ₺</span></div>
+    <div class="item"><span class="name">Demirci Halıbert Güzeli</span><span class="price">225 ₺</span></div>
+    <div class="item"><span class="name">Hünnap Çiçeği Özü</span><span class="price">175 ₺</span></div>
+    <div class="item"><span class="name">Kiraz Çiçeği Özü</span><span class="price">175 ₺</span></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head"><h2>👥 Localar</h2><div class="hours">Rezervasyon</div></div>
+  <div class="cards">
+    <div class="item"><span class="name">Loca 1</span><span class="price">5.000 ₺</span></div>
+    <div class="item"><span class="name">Loca 2</span><span class="price">4.000 ₺</span></div>
+    <div class="item"><span class="name">Loca 3</span><span class="price">3.000 ₺</span></div>
+  </div>
+</section>
+
+<div class="footer">
+  Demirci Belediyesi Sosyal Tesisi<br>
+  Menü ve fiyatlar işletme tarafından güncellenebilir.
+</div>
 </div>
 </body>
 </html>
