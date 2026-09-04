@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Kanka Demo Site</title>
+<style>
+  :root{
+    --bg:#0f1115; --card:#171a21; --text:#f7f7f7; --muted:#b8bdc7;
+    --accent:#f3c969; --accent2:#ff7a59;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+    background:radial-gradient(circle at top,#232838 0%,var(--bg) 55%);
+    color:var(--text); min-height:100vh;
+  }
+  .wrap{max-width:980px;margin:auto;padding:28px 18px 50px}
+  header{display:flex;justify-content:space-between;align-items:center;gap:14px}
+  .brand{font-weight:800;letter-spacing:.4px}
+  .pill{border:1px solid #ffffff22;padding:9px 13px;border-radius:999px;color:var(--muted);font-size:14px}
+  .hero{padding:86px 0 58px;text-align:center}
+  h1{font-size:clamp(42px,8vw,84px);line-height:.95;margin:0 0 22px}
+  .grad{background:linear-gradient(90deg,var(--accent),var(--accent2));-webkit-background-clip:text;color:transparent}
+  .hero p{max-width:620px;margin:0 auto 28px;color:var(--muted);font-size:18px;line-height:1.6}
+  button{
+    border:0;border-radius:14px;padding:14px 20px;font-size:16px;font-weight:750;
+    background:linear-gradient(90deg,var(--accent),var(--accent2));color:#151515;cursor:pointer;
+    box-shadow:0 10px 35px #0006;
+  }
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:24px}
+  .card{
+    background:linear-gradient(180deg,#ffffff0c,#ffffff05);border:1px solid #ffffff14;
+    border-radius:22px;padding:22px;min-height:165px;box-shadow:0 14px 40px #0003;
+  }
+  .card h3{margin:4px 0 10px;font-size:20px}
+  .card p{margin:0;color:var(--muted);line-height:1.55}
+  .emoji{font-size:34px}
+  .surprise{
+    margin-top:22px;text-align:center;background:#ffffff08;border:1px dashed #ffffff25;
+    padding:18px;border-radius:18px;color:var(--muted)
+  }
+  footer{text-align:center;color:#7f8591;margin-top:44px;font-size:14px}
+  @media(max-width:760px){.grid{grid-template-columns:1fr}.hero{padding-top:62px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand">KANKA LABS 😎</div>
+    <div class="pill">Demo site • 2026</div>
+  </header>
+
+  <section class="hero">
+    <h1>Öylesine başladık,<br><span class="grad">site çıktı.</span></h1>
+    <p>Bu tamamen deneme amaçlı mini bir site. Telefonda da güzel görünür. Butona basınca ufak bir sürpriz var.</p>
+    <button onclick="surprise()">Bas bakalım 🔥</button>
+  </section>
+
+  <section class="grid">
+    <div class="card">
+      <div class="emoji">🍽️</div>
+      <h3>Menü</h3>
+      <p>İstersek burayı günlük yemek menüsüne çevirebiliriz.</p>
+    </div>
+    <div class="card">
+      <div class="emoji">📱</div>
+      <h3>QR Menü</h3>
+      <p>Tek QR kodla telefondan açılan gerçek bir dijital menü olabilir.</p>
+    </div>
+    <div class="card">
+      <div class="emoji">✨</div>
+      <h3>İstediğin Tasarım</h3>
+      <p>Renkleri, logoyu, başlığı ve bölümleri istediğimiz gibi değiştiririz.</p>
+    </div>
+  </section>
+
+  <div id="msg" class="surprise">Henüz butona basmadın 😄</div>
+  <footer>Sen söyledin, ben yaptım. 🤝</footer>
+</div>
+
+<script>
+function surprise(){
+  const msgs=[
+    "Oğlum bu gerçekten site oldu 😂🔥",
+    "Başkan Bey görse 'bunu kim yaptı?' der 😎",
+    "Bir sonraki adım: gerçek QR menü 👀",
+    "Kanka Labs çalışıyor 🤝"
+  ];
+  document.getElementById("msg").textContent=msgs[Math.floor(Math.random()*msgs.length)];
+}
+</script>
+</body>
+</html>
